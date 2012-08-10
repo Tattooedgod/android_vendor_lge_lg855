@@ -1,0 +1,23 @@
+#!/system/bin/sh
+
+# Modified from vendor script /system/etc/init.gprs-pppd
+
+cid=$1
+
+PPPD_PID=
+
+# XXX: hack for now until we can figure out why ip-down is not running
+/system/bin/setprop "net.ppp0.status" ""
+
+/system/bin/setprop "net.gprs.ppp-exit$cid" ""
+
+/system/bin/log -t pppd "Starting pppd for cid=$cid"
+
+/system/bin/pppd /dev/pts4 115200 ipparam 1 dump debug nodetach ipcp-accept-local ipcp-accept-remote usepeerdns connect-delay 10000 mtu 1472 mru 1472
+
+PPPD_EXIT=$?
+PPPD_PID=$!
+
+/system/bin/log -t pppd "pppd(cid=$cid) exited with $PPPD_EXIT"
+
+/system/bin/setprop "net.gprs.ppp-exit$cid" "$PPPD_EXIT"
