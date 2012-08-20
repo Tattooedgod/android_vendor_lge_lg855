@@ -4,6 +4,7 @@ PRODUCT_COPY_FILES += \
 	vendor/lge/sniper/proprietary/usr/keychars/hub_synaptics_touch.kcm:system/usr/keychars/hub_synaptics_touch.kcm \
 	vendor/lge/sniper/proprietary/usr/keylayout/hub_synaptics_touch.kl:system/usr/keylayout/hub_synaptics_touch.kl \
 	vendor/lge/sniper/proprietary/usr/keychars/TWL4030_Keypad.kcm:system/usr/keychars/TWL4030_Keypad.kcm \
+	vendor/lge/sniper/proprietary/usr/keylayout/TWL4030_Keypad.kl:system/usr/keylayout/TWL4030_Keypad.kl \
 	vendor/lge/sniper/proprietary/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
 	vendor/lge/sniper/proprietary/usr/keylayout/dop_keypad.kl:system/usr/keylayout/dop_keypad.kl \
 	vendor/lge/sniper/proprietary/usr/keylayout/twl4030_pwrbutton.kl:system/usr/keylayout/twl4030_pwrbutton.kl \
