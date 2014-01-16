@@ -10,4 +10,4 @@ PRODUCT_PACKAGES := \
 PRODUCT_COPY_FILES := \
 	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
-$(call inherit-product, vendor/lge/sniper/sniper-vendor-blobs.mk)
+$(call inherit-product, vendor/lge/lg855/lg855-vendor-blobs.mk)
